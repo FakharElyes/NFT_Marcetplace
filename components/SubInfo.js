@@ -6,13 +6,26 @@ export const NFTTitle = ({ title, subTitle, titleSize, subtitleSize }) => {
   return (
     <View >
       <Text style ={{ fontFamily: FONTS.semiBold, fontSize: titleSize, color:COLORS.primary}}>{title}</Text>
+      <Text style ={{ fontFamily: FONTS.regular, fontSize: subtitleSize, color:COLORS.primary}}>{subTitle}</Text>
     </View>
   )
 }
-export const EthPrice = () => {
+export const EthPrice = ({ price }) => {
   return (
-    <View>
-      <Text>EthPrice</Text>
+    <View style={{ fleDirection: 'row', alignItems: 'center' }}>
+      <Image
+        source={assets.eth}
+        resizeMode="contain"
+        style={{ width: 20, height: 20, marginRight: 2}}
+      />
+      <Text style ={{ 
+          fontFamily: FONTS.medium, 
+          fontSize: SIZES.font, 
+          color:COLORS.primary
+          }}>
+              {price}
+        </Text>
+
     </View>
   )
 }
