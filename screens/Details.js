@@ -48,11 +48,7 @@ function Details({ route, navigation }) {
       backgroundColor: 'rgba(255,255,255,0.5)'
 
     }}>
-      <RectButton 
-          minWidth={170}
-          fontSize={SIZES.large}
-          {...SHADOWS.dark}
-        />
+      <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
     </View>
       
     <FlatList
@@ -67,10 +63,16 @@ function Details({ route, navigation }) {
           <SubInfo />
           <View style={{ padding: SIZES.font}}>
             <DetailsDesc data={data}/>
+            {data.bids.length > 0 && (
+              <Text style={{
+                fontSize: SIZES.font,
+                fontFamily: FONTS.semiBold,
+                color: COLORS.primary
+              }}>
+                Current Bid
+              </Text>
+            )}
           </View>
-
-
-
         </React.Fragment>
       )}
     />
