@@ -61,10 +61,8 @@ const HomeHeader = ({ onSearch }) => {
               style={{flex: 1}}
               onChangeText={onSearch}
             />
-
         </View>
       </View>
-
     </View>
   )
 }

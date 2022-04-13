@@ -12,23 +12,24 @@ export const NFTTitle = ({ title, subTitle, titleSize, subtitleSize }) => {
 }
 export const EthPrice = ({ price }) => {
   return (
-    <View style={{ fleDirection: 'row', alignItems: 'center' }}>
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
       <Image
         source={assets.eth}
         resizeMode="contain"
-        style={{ width: 20, height: 20, marginRight: 2}}
+        style={{ width: 20, height: 20, marginRight: 2 }}
       />
-      <Text style ={{ 
-          fontFamily: FONTS.medium, 
-          fontSize: SIZES.font, 
-          color:COLORS.primary
-          }}>
-              {price}
-        </Text>
-
+      <Text
+        style={{
+          fontFamily: FONTS.medium,
+          fontSize: SIZES.font,
+          color: COLORS.primary,
+        }}
+      >
+        {price}
+      </Text>
     </View>
-  )
-}
+  );
+};
 export const ImageCmp = ({imgUrl , index}) => {
   return (
     <Image
